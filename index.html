@@ -1,7 +1,309 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mindshot</title><style>:root{--bg:#FAFAF7;--ink:#1C1B22;--sub:#5B5A66;--acc:#4338CA}
-@media (prefers-color-scheme:dark){:root{--bg:#14131C;--ink:#ECEBF3;--sub:#A9A8B8;--acc:#A5B4FC}}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
-main{max-width:680px;margin:0 auto;padding:40px 16px 64px}h1{font-size:28px;line-height:1.25;margin:0 0 8px}
-h2{font-size:19px;margin:32px 0 6px}p,li{color:var(--sub)}a{color:var(--acc)}header{display:flex;align-items:center;gap:10px;margin-bottom:28px;font-weight:700}
-.logo{width:28px;height:28px;border-radius:8px;background:#4338CA;display:grid;place-items:center}</style></head><body><main><header><span class="logo"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.3 2.5 6 13.5h5.2l-1.5 8 7.3-11h-5.2z" fill="#fff"/></svg></span>Mindshot</header><h1>Mindshot</h1><p>One sharp idea per swipe on career, money and life skills, in English and Hinglish. Coming soon to Google Play.</p><p><a href="privacy/">Privacy policy</a></p></main></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mindshot: one idea, every swipe</title>
+<meta name="description" content="Mindshot gives you one sharp idea per swipe on career, money and habits. Pick topics or follow books, remember what you read, and use it today. 5 minutes a day, in your language.">
+<link rel="canonical" href="https://mindshot.life/">
+<link rel="icon" href="brand/assets/mindshot-mark-tile.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="brand/assets/mindshot-mark-tile-1024.png">
+<meta name="theme-color" content="#1E1B4B">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mindshot">
+<meta property="og:title" content="Mindshot: one idea, every swipe">
+<meta property="og:description" content="One sharp idea per swipe on career, money and habits. 5 minutes a day, in your language.">
+<meta property="og:url" content="https://mindshot.life/">
+<meta property="og:image" content="https://mindshot.life/brand/assets/facebook-cover-1640x624.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"Mindshot","operatingSystem":"Android","applicationCategory":"EducationalApplication","offers":{"@type":"Offer","price":"0"},"url":"https://mindshot.life/","installUrl":"https://play.google.com/store/apps/details?id=com.getmindshot.app"}
+</script>
+<style>
+:root{
+  --paper:#FAFAF7;--surface:#FFFFFF;--ink:#16181D;--sub:#555A66;--line:#E4E4DE;
+  --indigo:#4338CA;--night:#1E1B4B;--mid:#7C83E6;--soft:#EEF0FF;--amber:#F5A524;
+  --link:#4338CA;--hero-bg:#1E1B4B;--hero-ink:#FFFFFF;--hero-sub:#C7CBF6;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#14131C;--surface:#1E1D29;--ink:#ECEBF3;--sub:#A9A8B8;--line:#2E2D3A;--soft:#26244A;--link:#A5B4FC;--hero-bg:#0F0D2B}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--link)}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;letter-spacing:-.01em;margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:#fff;color:#000;padding:8px 12px;border-radius:8px;z-index:9}
+
+/* nav */
+.nav{position:absolute;inset:0 0 auto;z-index:2}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font:700 21px "Space Grotesk",sans-serif}
+.brand img{width:34px;height:34px;border-radius:9px}
+.nav-links{display:flex;gap:22px;align-items:center}
+.nav-links a{color:var(--hero-sub);text-decoration:none;font-size:15px}
+.nav-links a:hover{color:#fff}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 22px;border-radius:999px;font-weight:600;text-decoration:none;font-size:16px;transition:transform .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-play{background:#fff;color:#16181D}
+.btn-play svg{width:22px;height:22px}
+.btn-ghost{color:#fff;border:1px solid rgba(255,255,255,.3)}
+.btn-indigo{background:var(--indigo);color:#fff}
+
+/* hero */
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:128px 0 88px;overflow:hidden;position:relative}
+.hero::after{content:"";position:absolute;width:720px;height:720px;right:-220px;top:-200px;background:radial-gradient(closest-side,rgba(124,131,230,.35),transparent);pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;position:relative;z-index:1}
+.eyebrow{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);margin-bottom:16px}
+.hero h1{font-size:clamp(40px,6vw,68px);line-height:1.04}
+.hero p.lead{font-size:20px;color:var(--hero-sub);max-width:520px;margin:20px 0 32px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.note{font-size:14px;color:var(--hero-sub);margin-top:16px}
+
+/* phone mock */
+.phone{width:300px;max-width:100%;margin:0 auto;aspect-ratio:9/18.5;background:#0B0A1F;border-radius:44px;padding:12px;box-shadow:0 40px 80px rgba(0,0,0,.45),inset 0 0 0 2px #2A2860;position:relative}
+.screen{height:100%;background:#FAFAF7;border-radius:34px;overflow:hidden;display:flex;flex-direction:column;color:#16181D}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:16px 18px 8px;font-size:11px;color:#4338CA;font-weight:600}
+.progress{height:4px;background:#DDE0FB;margin:0 18px;border-radius:4px}
+.progress i{display:block;width:30%;height:100%;background:#4338CA;border-radius:4px}
+.langs{display:flex;gap:4px;background:#fff;border-radius:999px;padding:3px;font-size:10px}
+.langs span{padding:3px 8px;border-radius:999px}.langs .on{background:#16181D;color:#fff}
+.visual{background:#EEF0FF;margin-top:12px;height:120px;display:flex;align-items:flex-end;justify-content:center;gap:10px;padding-bottom:20px}
+.visual b{width:28px;border-radius:6px;display:block}
+.cardbody{padding:16px 18px;flex:1;display:flex;flex-direction:column;gap:8px}
+.tag{font-size:10px;font-weight:600;letter-spacing:.08em;color:#4338CA}
+.cardbody h3{font-size:19px;line-height:1.2}
+.cardbody p{margin:0;font-size:12.5px;line-height:1.5;color:#555A66}
+.try{margin-top:auto;background:#FFF6E5;border-radius:12px;padding:10px 12px;font-size:12px;color:#5C3D00}
+.try strong{color:#16181D}
+.tabs{display:flex;justify-content:space-around;border-top:1px solid #E4E4DE;padding:10px 0 14px;font-size:10px;color:#555A66}
+.tabs .on{color:#4338CA;font-weight:600}
+.stack-back{position:absolute;inset:24px -18px -14px 18px;background:#7C83E6;border-radius:44px;z-index:-1;transform:rotate(5deg);opacity:.6}
+
+/* sections */
+section{padding:88px 0}
+.section-head{max-width:640px;margin-bottom:44px}
+.section-head h2{font-size:clamp(30px,4vw,42px);line-height:1.1}
+.section-head p{color:var(--sub);font-size:18px;margin:14px 0 0}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:var(--soft);color:var(--link);font:700 17px "Space Grotesk",sans-serif;margin-bottom:16px}
+.step h3{font-size:21px;margin-bottom:6px}
+.step p{margin:0;color:var(--sub);font-size:16px}
+
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.feature{padding:4px 0}
+.ico{width:44px;height:44px;border-radius:12px;background:var(--soft);display:grid;place-items:center;margin-bottom:14px}
+.ico svg{width:22px;height:22px;stroke:var(--link);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.feature h3{font-size:19px;margin-bottom:6px}
+.feature p{margin:0;color:var(--sub);font-size:16px}
+
+.alt{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:var(--paper);font-weight:600;font-size:15px}
+.books{display:grid;gap:12px}
+.book{display:flex;gap:14px;align-items:center;padding:14px;border-radius:16px;border:1px solid var(--line);background:var(--paper)}
+.cover{flex:none;width:42px;height:56px;border-radius:6px;background:var(--night);color:#fff;display:grid;place-items:center;font:700 19px "Space Grotesk",sans-serif}
+.book b{display:block;font-size:16px}
+.book span{font-size:14px;color:var(--sub)}
+.small{font-size:14px;color:var(--sub);margin-top:14px}
+
+.langs-big{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.lang{padding:18px 22px;border-radius:18px;background:var(--surface);border:1px solid var(--line);min-width:150px}
+.lang b{display:block;font:700 22px "Space Grotesk","Noto Sans Devanagari",sans-serif}
+.lang span{font-size:14px;color:var(--sub)}
+.lang.more{border-style:dashed}
+
+.faq{max-width:760px}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;font-weight:600;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--link);font-size:24px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--sub);margin:10px 0 0}
+
+.final{background:var(--hero-bg);color:#fff;border:1px solid rgba(124,131,230,.3);border-radius:28px;padding:56px 40px;text-align:center;margin:0 20px}
+.final h2{font-size:clamp(30px,4vw,44px)}
+.final p{color:var(--hero-sub);font-size:18px;margin:12px 0 28px}
+
+footer{padding:56px 0 40px;color:var(--sub);font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center}
+footer nav{display:flex;flex-wrap:wrap;gap:20px}
+footer a{color:var(--sub);text-decoration:none}footer a:hover{color:var(--ink)}
+
+@media (max-width:860px){
+  .hero{padding:104px 0 64px}
+  .hero .wrap,.split{grid-template-columns:1fr}
+  .steps,.features{grid-template-columns:1fr}
+  .nav-links a:not(.keep){display:none}
+  section{padding:64px 0}
+  .final{padding:44px 22px;margin:0 16px}
+  .wrap{padding:0 16px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="brand/assets/mindshot-mark-tile.svg" alt="">Mindshot</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#books">Topics and books</a>
+      <a href="#faq">FAQ</a>
+      <a class="keep" href="https://play.google.com/store/apps/details?id=com.getmindshot.app">Get the app</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">5 minutes a day</span>
+      <h1>One idea.<br>Every swipe.</h1>
+      <p class="lead">Mindshot gives you one sharp idea at a time on career, money and habits. Swipe through, remember what you read, and use it today. In your language.</p>
+      <div class="cta">
+        <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.getmindshot.app">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 1.8 13.4 12l-9.8 10.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-1 .6-1.2z"/><path fill="#FBBC04" d="m17 8.4-3.6 3.6L17 15.6l3.9-2.2c1.1-.6 1.1-2.2 0-2.8z"/><path fill="#4285F4" d="M3.6 22.2 13.4 12l3.6 3.6-11.4 6.4c-.7.4-1.4.4-2 .2z"/><path fill="#EA4335" d="M3.6 1.8c.6-.2 1.3-.2 2 .2L17 8.4 13.4 12z"/></svg>
+          Get it on Google Play
+        </a>
+        <a class="btn btn-ghost" href="#how">See how it works</a>
+      </div>
+      <p class="note">Free on Android. No sign-up needed.</p>
+    </div>
+
+    <div style="position:relative;isolation:isolate">
+      <div class="stack-back" aria-hidden="true"></div>
+      <div class="phone" role="img" aria-label="The Mindshot app showing an idea card about saying your number first in a negotiation">
+        <div class="screen">
+          <div class="bar"><span>3 of 10 min today</span><span class="langs"><span class="on">EN</span><span>Hinglish</span><span>हिं</span></span></div>
+          <div class="progress"><i></i></div>
+          <div class="visual" aria-hidden="true"><b style="height:72px;background:#4338CA"></b><b style="height:50px;background:#7C83E6"></b><b style="height:30px;background:#C7CBF6"></b></div>
+          <div class="cardbody">
+            <span class="tag">NEGOTIATION</span>
+            <h3>Say your number first</h3>
+            <p>The first number on the table pulls the deal toward it. Open with a specific figure a little above your target. Precise numbers sound researched and invite smaller counter-offers.</p>
+            <div class="try"><strong>Try today:</strong> name your number before they do.</div>
+          </div>
+          <div class="tabs"><span class="on">Today</span><span>Topics</span><span>Library</span><span>Profile</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Learn something useful before your coffee cools</h2>
+      <p>Each session is short and has an end, so you finish it and come back tomorrow.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Pick what to get better at</h3><p>Choose topics like negotiation, money and productivity, or follow a book you've always meant to read.</p></div>
+      <div class="step"><h3>Swipe one idea at a time</h3><p>Each card explains one idea in under a minute, with a simple picture and a real-world example.</p></div>
+      <div class="step"><h3>Remember it and use it</h3><p>Quick recall questions help it stick, and every session ends with one small thing to try today.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Built to make ideas stick</h2>
+      <p>Reading a summary is easy. Remembering it next week is the hard part.</p>
+    </div>
+    <div class="features">
+      <div class="feature"><div class="ico"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div><h3>One idea per screen</h3><p>No walls of text. Swipe up for the next idea, and stop when you hit your daily goal of 5, 10 or 15 minutes.</p></div>
+      <div class="feature"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 7v5l3 2"/><path d="M21 3v6h-6"/></svg></div><h3>Recall that works</h3><p>Short questions every few cards, and saved ideas come back for review just before you'd forget them.</p></div>
+      <div class="feature"><div class="ico"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div><h3>Apply it today</h3><p>Every session ends with one small action, so the idea turns into something you actually do.</p></div>
+      <div class="feature"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><h3>In your language</h3><p>Pick your language when you start, and switch on any card. Each language is written for its readers, not translated word for word.</p></div>
+      <div class="feature"><div class="ico"><svg viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></div><h3>Listen hands-free</h3><p>Tap Listen and your phone reads the card aloud, for the commute or a walk.</p></div>
+      <div class="feature"><div class="ico"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div><h3>Private by design</h3><p>No account, no ads, no tracking. Your progress stays on your phone.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="books">
+  <div class="wrap split">
+    <div>
+      <div class="section-head" style="margin-bottom:24px">
+        <h2>Topics first. Books too.</h2>
+        <p>Pick topics and Mindshot brings you the best ideas on them from many sources. Or follow a book to get its key ideas, explained in our own words.</p>
+      </div>
+      <div class="chips">
+        <span class="chip">Negotiation</span><span class="chip">Money</span><span class="chip">Productivity</span><span class="chip">Leadership</span><span class="chip">Speaking</span><span class="chip">Psychology</span><span class="chip">Habits</span>
+      </div>
+    </div>
+    <div>
+      <div class="books">
+        <div class="book"><span class="cover">A</span><div><b>Atomic Habits</b><span>James Clear</span></div></div>
+        <div class="book"><span class="cover">D</span><div><b>Deep Work</b><span>Cal Newport</span></div></div>
+        <div class="book"><span class="cover">P</span><div><b>The Psychology of Money</b><span>Morgan Housel</span></div></div>
+        <div class="book"><span class="cover">G</span><div><b>Getting to Yes</b><span>Roger Fisher and William Ury</span></div></div>
+      </div>
+      <p class="small">More books are on the way. Mindshot shares key ideas to get you started; for the full story, read the book.</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Your language, your pick</h2>
+      <p>Choose a language when you start. Every card, example and reminder follows it.</p>
+    </div>
+    <div class="langs-big">
+      <div class="lang"><b>English</b><span>Available now</span></div>
+      <div class="lang"><b>Hinglish</b><span>Available now</span></div>
+      <div class="lang"><b>हिंदी</b><span>Hindi · available now</span></div>
+      <div class="lang more"><b>More soon</b><span>New languages are coming</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap faq">
+    <div class="section-head"><h2>Questions</h2></div>
+    <details><summary>Is Mindshot free?</summary><p>Yes. Mindshot is free to download and use on Android.</p></details>
+    <details><summary>Do I need an account?</summary><p>No. Open the app, pick your topics and start swiping. Your progress is saved on your phone.</p></details>
+    <details><summary>How long does a session take?</summary><p>You set a daily goal of 5, 10 or 15 minutes. The feed ends when you reach it, with one thing to try that day.</p></details>
+    <details><summary>Which languages can I use?</summary><p>English, Hinglish and Hindi today, with more on the way. You can switch language on any card.</p></details>
+    <details><summary>Is there an iPhone app?</summary><p>Not yet. Mindshot is on Android first.</p></details>
+    <details><summary>What data do you collect?</summary><p>None. There are no accounts, analytics or ads. Read the <a href="privacy/">privacy policy</a>.</p></details>
+  </div>
+</section>
+
+<div class="final">
+  <h2>Get sharper in 5 minutes a day</h2>
+  <p>One idea. Every swipe.</p>
+  <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.getmindshot.app">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 1.8 13.4 12l-9.8 10.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-1 .6-1.2z"/><path fill="#FBBC04" d="m17 8.4-3.6 3.6L17 15.6l3.9-2.2c1.1-.6 1.1-2.2 0-2.8z"/><path fill="#4285F4" d="M3.6 22.2 13.4 12l3.6 3.6-11.4 6.4c-.7.4-1.4.4-2 .2z"/><path fill="#EA4335" d="M3.6 1.8c.6-.2 1.3-.2 2 .2L17 8.4 13.4 12z"/></svg>
+    Get it on Google Play
+  </a>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Mindshot</span>
+    <nav aria-label="Footer">
+      <a href="privacy/">Privacy policy</a>
+      <a href="brand/">Brand kit</a>
+      <a href="https://www.instagram.com/mindshot.app/">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61596611493990">Facebook</a>
+      <a href="mailto:hello@mindshot.life">hello@mindshot.life</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
